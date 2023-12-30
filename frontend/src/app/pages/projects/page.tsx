@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 const page = () => {
   return (
-    <div className="flex bg-slate-950">
+    <div className="flex bg-slate-950 h-screen">
       <Sidebar />
       <div className="mx-auto my-10 max-w-3xl">
         <h1 className="text-center text-4xl font-semibold pb-3">

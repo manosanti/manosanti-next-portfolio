@@ -3,6 +3,8 @@ import React from 'react'
 import lucasDemoday from '@/app/imgs/lucas-santiago-demoday.png'
 import Img from 'next/image'
 import Link from 'next/link'
+import lucasDemoday2 from '@/app/imgs/lucas-santiago-demoday-2.png'
+import standFeiraqui from '@/app/imgs/stand-feiraqui.jpg'
 
 const AboutMe = () => {
   return (
@@ -25,6 +27,11 @@ const AboutMe = () => {
           <Img src={lucasDemoday} alt='Lucas Santiago no Demoday' className='mt-2 rounded' />
           <p className='text-center text-slate-400'>Lucas Santiago apresentando o projeto <Link href="https://github.com/FeirAqui" className='text-blue-600' target='_blank'>FeiraAqui</Link>{" "}(Website), para mais de mil pessoas, concebido em colaboração com o seu grupo no <Link href="https://www.proa.org.br/" className='text-blue-600' target='_blank'>Instituto PROA</Link>, em julho de 2022.</p>
 
+          <h3>Onde tudo começou</h3>
+          <div className='grid grid-cols-2 gap-3'>
+            <Img src={lucasDemoday2} alt='Lucas Santiago no Demoday' className='mt-2 rounded' />
+            <Img src={standFeiraqui} alt='Lucas Santiago no Demoday' className='mt-2 rounded' />
+          </div>
 
           <div className='mt-7 text-slate-300'>
             <p>Entusiasta de tecnologia desde a adolescência, explorei diversas áreas de TI antes de encontrar minha paixão pela programação. Após seis meses de estudo intenso em Desenvolvimento Web no Instituto PROA, em 2022, percebi que sou apaixonado por programação. Esta é a minha vocação e o que irei levar para o resto da vida.</p>

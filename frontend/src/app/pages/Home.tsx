@@ -23,7 +23,7 @@ function calcMonthsActmobFromStart(startDate: Date): number {
 
 const Home = () => {
   return (
-    <div className="flex bg-slate-950">
+    <div className={`flex bg-slate-950`}>
       <Sidebar />
       <div className="mx-auto my-10 max-w-3xl">
         <div className="flex items-center">
