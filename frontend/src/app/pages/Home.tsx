@@ -12,6 +12,7 @@ import actmobLogo from "@/app/imgs/actmob-logo.jpeg";
 import proaLogo from "@/app/imgs/download.png";
 import oracleLogo from "@/app/imgs/downloadOracle.png";
 import { FiDownload } from "react-icons/fi";
+import lucasAvatar from "@/app/imgs/lucasAvatar.webp";
 
 function calcMonthsActmobFromStart(startDate: Date): number {
   const today = new Date();
@@ -26,11 +27,26 @@ const Home = () => {
       <Sidebar />
       <div className="mx-auto my-10 max-w-3xl">
         <div className="flex items-center">
-          <Img
-            src={profilePhoto}
-            alt="Lucas Santiago"
-            className="aspect-square rounded-lg overflow-hidden w-24 h-24"
-          />
+          <label className="swap swap-flip text-9xl">
+            <input type="checkbox" />
+
+            <div className="swap-on">
+              <Img
+                src={lucasAvatar}
+                alt="Lucas Santiago"
+                className="aspect-square rounded-lg overflow-hidden w-24 h-24"
+              />
+            </div>
+
+            <div className="swap-off">
+              <Img
+                src={profilePhoto}
+                alt="Lucas Santiago"
+                className="aspect-square rounded-lg overflow-hidden w-24 h-24"
+              />
+            </div>
+          </label>
+
           <div className="ml-4">
             <h1 className="text-3xl font-bold">Lucas Santiago</h1>
             <span className="text-slate-400">
@@ -62,7 +78,7 @@ const Home = () => {
         {/* Card About Me */}
         <div className="rounded-xl border border-collapse border-slate-800 my-4 p-7">
           <div className="flex justify-between mb-4">
-            <h3 className="text-xl font-semibold ">📋 Sobre mim:</h3>
+            <h3 className="text-xl font-semibold ">📋 Sobre mim</h3>
             <Link href="/" className="text-xs flex items-center text-blue-600">
               Saber Mais <IoIosArrowForward />
             </Link>
@@ -153,7 +169,7 @@ const Home = () => {
               <div className="ml-3">
                 <h3 className="text-sm font-semibold">Instituto Proa</h3>
                 <p className="text-slate-400 text-xs">
-                  Estudante em Desenvolvimento Web Full-Stack
+                  Estudante em Desenvolvimento Full-Stack
                 </p>
                 <p className="text-slate-500 text-xs">
                   fev. 2022 - jul. 2022 • 6 meses
@@ -168,12 +184,11 @@ const Home = () => {
                 </button>
               </Link>
             </div>
-
           </div>
 
           <div className="rounded-xl border border-collapse border-slate-800 my-4 p-7">
             <div className="flex justify-between mb-4">
-              <h3 className="text-xl font-semibold ">💼 Experiences</h3>
+              <h3 className="text-xl font-semibold">💼 Experiences</h3>
               <Link
                 href="/"
                 className="text-xs flex items-center text-blue-600"
@@ -190,17 +205,22 @@ const Home = () => {
           </div>
         </div>
         {/* My Projects */}
-        <div className="rounded border border-collapse border-slate-800 my-4 p-2">
-          <h3>📂 My projects</h3>
+        <div className="rounded-xl border border-collapse border-slate-800 my-4 p-7">
+          <div className="flex justify-between mb-4">
+            <h3 className="text-xl font-semibold">📂 Meus Projetos</h3>
+            <Link href="/" className="text-xs flex items-center text-blue-600">
+              Saber Mais <IoIosArrowForward />
+            </Link>
+          </div>
           <div className="grid grid-cols-2">
             <Img src={easyAluga} alt="Lucas Santiago" className="my-2" />
             <div className="pl-4">
-              <h2 className="text-right">Easy Aluga</h2>
-              <p className="text-right">
+              <h2 className="text-right font-bold text-xl">Easy Aluga</h2>
+              <p className="text-right text-slate-400">
                 A white-label application to rent any vehicle, developed during
                 the BRQ Easy Carros Challenge on FIAP.
               </p>
-              <div className="float-right grid grid-cols-2 gap-2">
+              <div className="float-right mt-4 grid grid-cols-2 gap-2">
                 <button className="bg-blue-600 rounded hover:bg-blue-800 duration-300">
                   <Link href="/" className="text-sm inline-flex items-center">
                     <MdArrowOutward className="mr-2" />

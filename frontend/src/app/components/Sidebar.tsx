@@ -30,29 +30,40 @@ const Sidebar = () => {
           }`}
           onClick={() => setOpen(!open)}
         />{" "}
-        <div className="mb-4 inline-flex items-center">
-          <Link href="/" className={`px-2 inline-flex items-center`}>
-            <FaHouse className="mr-3" />
-            <span className={`inline-flex items-center ${!open && "hidden"}`}>
-              Home
-            </span>
-          </Link>
-        </div>
+        <ul className="duration-300 rounded hover:bg-indigo-950 cursor-pointer mt-2">
+          <li className="inline-flex items-center p-1 px-2">
+            <Link href="/" className={`w-full inline-flex items-center`}>
+              <FaHouse className="mr-3" />
+              <span
+                className={`inline-flex items-center text-sm ${
+                  !open && "hidden"
+                }`}
+              >
+                Home
+              </span>
+            </Link>
+          </li>
+        </ul>
         <div>
           <p
-            className={`text-xs text-slate-400 font-semibold ${
+            className={`text-xs mt-5 text-slate-400 font-semibold ${
               !open && "scale-0"
             }`}
           >
             Eu
           </p>
 
-          <ul className="px-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
-            <li className="inline-flex items-center mt-2">
-              <Link href="/" className={`inline-flex items-center`}>
+          <ul className="duration-300 rounded hover:bg-indigo-950 cursor-pointer mt-2">
+            <li className="inline-flex items-center p-1 px-2">
+              <Link
+                href="/pages/about-me"
+                className={`inline-flex items-center`}
+              >
                 <IoBookOutline className="mr-3" />
                 <span
-                  className={`inline-flex items-center ${!open && "hidden"}`}
+                  className={`inline-flex items-center text-sm ${
+                    !open && "hidden"
+                  }`}
                 >
                   Sobre Mim
                 </span>
@@ -60,12 +71,14 @@ const Sidebar = () => {
             </li>
           </ul>
 
-          <ul className="px-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
-            <li className="inline-flex items-center mt-2">
-              <Link href="/" className={`inline-flex items-center`}>
+          <ul className="duration-300 rounded hover:bg-indigo-950 cursor-pointer mt-1">
+            <li className="inline-flex items-center p-1 px-2">
+              <Link href="/pages/projects" className={`inline-flex items-center`}>
                 <FaFolderOpen className="mr-3" />
                 <span
-                  className={`inline-flex items-center ${!open && "hidden"}`}
+                  className={`inline-flex items-center text-sm ${
+                    !open && "hidden"
+                  }`}
                 >
                   Projetos
                 </span>
@@ -73,12 +86,14 @@ const Sidebar = () => {
             </li>
           </ul>
 
-          <ul className="px-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
-            <li className="inline-flex items-center mt-2">
-              <Link href="/" className={`inline-flex items-center`}>
+          <ul className="duration-300 rounded hover:bg-indigo-950 cursor-pointer mt-1">
+            <li className="inline-flex items-center p-1 px-2">
+              <Link href="/pages/uses" className={`inline-flex items-center`}>
                 <MdLaptopChromebook className="mr-3" />
                 <span
-                  className={`inline-flex items-center ${!open && "hidden"}`}
+                  className={`inline-flex items-center text-sm ${
+                    !open && "hidden"
+                  }`}
                 >
                   Tecnologias e Ferramentas
                 </span>
@@ -88,18 +103,20 @@ const Sidebar = () => {
         </div>
         <div>
           <p
-            className={`text-xs text-slate-400 font-semibold ${
+            className={`text-xs mt-5 text-slate-400 font-semibold ${
               !open && "scale-0"
             }`}
           >
             Socials
           </p>
-          <ul className="px-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
-            <li className="inline-flex items-center mt-2">
+          <ul className="mt-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
+            <li className="inline-flex items-center p-1 px-2">
               <Link href="/" className={`inline-flex items-center`}>
                 <FaGithub className="mr-3" />
                 <span
-                  className={`inline-flex items-center ${!open && "hidden"}`}
+                  className={`inline-flex items-center text-sm ${
+                    !open && "hidden"
+                  }`}
                 >
                   GitHub
                 </span>
@@ -107,24 +124,28 @@ const Sidebar = () => {
             </li>
           </ul>
 
-          <ul className="px-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
-            <li className="inline-flex items-center mt-2">
+          <ul className="mt-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
+            <li className="inline-flex items-center p-1 px-2">
               <Link href="/" className={`inline-flex items-center`}>
                 <ImLinkedin2 className="mr-3" />
                 <span
-                  className={`inline-flex items-center ${!open && "hidden"}`}
+                  className={`inline-flex items-center text-sm ${
+                    !open && "hidden"
+                  }`}
                 >
                   LinkedIn
                 </span>
               </Link>
             </li>
           </ul>
-          <ul className="px-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
-            <li className="inline-flex items-center mt-2">
+          <ul className="mt-2 duration-300 rounded hover:bg-indigo-950 cursor-pointer">
+            <li className="inline-flex items-center p-1 px-2">
               <Link href="/" className={`inline-flex items-center`}>
                 <MdEmail className="mr-3" />
                 <span
-                  className={`inline-flex items-center ${!open && "hidden"}`}
+                  className={`inline-flex items-center text-sm ${
+                    !open && "hidden"
+                  }`}
                 >
                   E-mail
                 </span>
